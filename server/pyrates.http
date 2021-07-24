@@ -1,0 +1,39 @@
+###GET ALL PRYVATES
+GET http://localhost:8000/api/pyrate
+
+###GET A SINGE PRYVATE
+GET http://localhost:8000/api/pyrate/60fb97320f6fde4184df013a
+
+###CREATE A NEW PROJECT
+POST http://localhost:8000/api/pyrate/new
+Content-Type: application/json
+
+{
+    "pyrateName" : "pedr",
+    "imageUrl" : "aaaaaaaaa",
+    "treasureChest" : 3,
+    "catchPhrase" : "aaaaa",
+    "crewPosition" : "Captain",
+    "pegLeg" : "true",
+    "eyePatch" : "true",
+    "hookHand" : "true"
+}
+
+
+###UPDATE A PROJECT
+PUT http://localhost:8000/api/pyrate/update/60fb97320f6fde4184df013a
+Content-Type: application/json
+
+{
+    "pyrateName" : "pedro",
+    "imageUrl" : "aaaaaaaaa",
+    "treasureChest" : 3,
+    "catchPhrase" : "aaaaa",
+    "crewPosition" : "Captain",
+    "pegLeg" : "true",
+    "eyePatch" : "true",
+    "hookHand" : "true"
+}
+
+###DELETE AN PROJECT
+DELETE http://localhost:8000/api/pyrate/delete/60fb97320f6fde4184df013a
