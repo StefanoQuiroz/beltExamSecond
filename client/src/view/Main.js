@@ -11,7 +11,9 @@ import PyrateId from '../components/PyrateId';
 const Main = () => {
     //const [actualizar, setActualizar] = useState(0)
     const [datos, setDatos] = useState([]);
+
     const [users, setUsers] = useState([]);
+    
     useEffect(()=>{
         axios.get("/api/pyrate")
             .then(response => setDatos(response.data.data))
@@ -28,6 +30,7 @@ const Main = () => {
                 text: "Error in loading the data from users"
             }))
     }, [])
+    
     return (
         <Container>
             <Router>
@@ -58,18 +61,6 @@ const Main = () => {
                     </Route>
                 </Switch>
             </Router>
-            
-                    {/* <Route path={`/projects/new`}>
-                        <Row>
-                            <h1>Project Manager</h1>
-                            <Col md={6}>
-                                <PMNew datos={datos} setDatos={setDatos} actualizar={actualizar} setActualizar={setActualizar}/>
-                            </Col>
-                        </Row>
-                    </Route> */}
-                    {/* Route path={`/movies`}>
-                        <MoviesList datos={datos} setDatos={setDatos}  actualizar={actualizar} setActualizar={setActualizar}/>
-                    </Route> */}
         </Container>
 
     );

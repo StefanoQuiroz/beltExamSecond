@@ -52,12 +52,14 @@ const Login = () => {
                         <Input type="text" id="email" name="email" value={login.email} onChange={onChange} required style={{border: '2px solid black'}}/>
                     </Col>
                 </FormGroup>
+
                 <FormGroup row style={{padding: '1rem'}}>
                     <Label for="password" sm={4}>Password</Label>
                     <Col sm={8}>
                         <Input type="password" id="password" name="password" value={login.password} onChange={onChange} required style={{border: '2px solid black'}}/>
                     </Col>
                 </FormGroup>
+                
                 <FormGroup row style={{padding: '1rem'}}>
                     <Col xs>
                         <Button color="primary" size='lg' style={{width:'100%', color:'#fff' , fontWeight:'bold', border:'2px solid black'}} type="submit">Submit</Button>

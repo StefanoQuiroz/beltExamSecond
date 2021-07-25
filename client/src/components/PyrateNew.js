@@ -157,4 +157,5 @@ const PyrateNew = (props) => {
     );
 }
 
+
 export default PyrateNew;

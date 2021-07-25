@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 
 const Register = (props) => {
     const {users, setUsers} = props
+
     const [input, setInput] = useState({
         firstName: "",
         lastName: "",
@@ -99,6 +100,7 @@ const Register = (props) => {
                         {(password !== confirmPassword) && <p style={{color:'red'}}>Password and confirm password must be match</p>}
                     </Col>
                 </FormGroup>
+                
                 <FormGroup row style={{padding: '1rem'}}>
                     <Col xs>
                         <Button color="primary" size='lg' style={{width:'100%', color:'#fff' , fontWeight:'bold', border:'2px solid black'}} type="submit">Submit</Button>

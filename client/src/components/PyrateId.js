@@ -8,6 +8,7 @@ const PyrateId = (props) => {
     const {id} = useParams()
     //const {datos, setDatos} = props;
     const [pyrate, setPyrate] = useState([]);
+    
     const history = useHistory();
 
     const crewBoard = (event) => {
@@ -64,6 +65,7 @@ const PyrateId = (props) => {
                             <h1 style={{textAlign: 'center', fontSize:'3.5rem'}}>" {pyrate.catchPhrase} "</h1>
                         </Row>    
                     </Col>
+                    
                     <Col sm={6} style={{backgroundColor:'white'}}>
                         <Row>
                             <h1 style={{textAlign:'center'}}>About</h1>
@@ -75,7 +77,7 @@ const PyrateId = (props) => {
                             <h2>Treasures: {pyrate.treasureChest}</h2>
                         </Row>
                         <Row>
-                            <h2>Peg Leg: {pyrate.pegLeg? <span>Yes</span>:<Button color="danger">No</Button>}{!pyrate.pegLeg? <span>Yes</span>:<Button color="danger" onClick={(event) => setPyrate(event.target.value)}>No</Button>}</h2>
+                            <h2>Peg Leg: {pyrate.pegLeg? <span>Yes</span>:<Button color="danger">No</Button>}{!pyrate.pegLeg? <span>Yes</span>:<Button color="danger">No</Button>}</h2>
                         </Row>
                         <Row>
                             <h2>Eye Patch: {pyrate.eyePatch? <span>Yes</span>:<Button color="danger">No</Button>}{!pyrate.eyePatch? <span>Yes</span>:<Button color="danger">No</Button>}</h2>

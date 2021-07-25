@@ -51,6 +51,7 @@ const PyrateCrew = (props) => {
                         <Row><h1 >{people.pyrateName}</h1></Row>
                         <Row>
                             <Col sm={6}><Button color="primary" style={{color:'#fff' , fontWeight:'bold', border:'2px solid black'}} onClick={(event)=> viewPirate(event, people._id) }>View Pirate</Button></Col>
+                            
                             <Col sm={6}><Button color="danger" style={{color:'#fff' , fontWeight:'bold', border:'2px solid black'}} onClick={(event)=> walkThePlank(event, people._id) }>Walk the Plank</Button></Col>
                         </Row>
                     </Col>
